@@ -65,15 +65,26 @@ body {
   }
 }
 
+/* Animación vertical pared */
+@keyframes move2 {
+  0% {
+    top: -50px;       /* Punto más alto */
+  }
+  100% {
+    top: 70px;        /* Punto más bajo */
+  }
+}
+
 .wall {
   position: absolute;
-  bottom: -2px;
   left: 580px;
   width: 20px;
   height: 80px;
   background: orange;
+  top: -50px;                  /* Empieza más arriba */
+  animation: move2 2.9s linear infinite alternate;
+  
 }
-
 
 .explosion {
   position: absolute;
